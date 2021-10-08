@@ -2,13 +2,14 @@ import requests
 import re
 import time
 import os
+from datetime import datetime
 
 your_name = os.environ["YOUR_NAME"]
 your_pwd = os.environ["YOUR_PWD"]
 wechat_key = os.environ["WECHAT_KEY"]
 token = os.environ["TOKEN"]
 chat_id = os.environ["CHAT_ID"]
-form_data = os.environ["FORM"]
+# form_data = os.environ["FORM"]
 
 def bot_post(text):
     if wechat_key != "":
@@ -49,6 +50,11 @@ def fillForm(res):
 
 
 def main():
+    dayOfWeek = datetime.now().weekday()
+    if dayOfWeek == (5 or 6):
+        form_data = os.environ["FORM"]
+    else:
+        form_data = os.environ["FORM_DYG"]
     result = fillForm(buaaLogin(your_name, your_pwd))
     print(result.text)
     bot_post(result.text)
