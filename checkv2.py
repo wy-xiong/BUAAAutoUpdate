@@ -35,7 +35,7 @@ def buaaLogin(user_name, password):
     return responseRes
 
 
-def fillForm(res):
+def fillForm(res, form_data):
     s = requests.session()
     headers = {
         'Accept': 'application/json, text/javascript, */*; q=0.01',
@@ -52,10 +52,11 @@ def fillForm(res):
 def main():
     dayOfWeek = datetime.now().weekday()
     if dayOfWeek == (5 or 6):
-        form_data = os.environ["FORM"]
+        #form_data = os.environ["FORM"]
+        result = fillForm(buaaLogin(your_name, your_pwd), os.environ["FORM"])
     else:
-        form_data = os.environ["FORM_DYG"]
-    result = fillForm(buaaLogin(your_name, your_pwd))
+        #form_data = os.environ["FORM_DYG"]
+        result = fillForm(buaaLogin(your_name, your_pwd), os.environ["FORM_DYG"])
     print(result.text)
     bot_post(result.text)
     return("DONE")
