@@ -51,12 +51,13 @@ def fillForm(res, form_data):
 
 def main():
     dayOfWeek = datetime.now().weekday()
-    if dayOfWeek == (5 or 6):
-        #form_data = os.environ["FORM"]
-        result = fillForm(buaaLogin(your_name, your_pwd), os.environ["FORM"])
-    else:
-        #form_data = os.environ["FORM_DYG"]
-        result = fillForm(buaaLogin(your_name, your_pwd), os.environ["FORM_DYG"])
+    # if dayOfWeek == (5 or 6):
+    #     #form_data = os.environ["FORM"]
+    #     result = fillForm(buaaLogin(your_name, your_pwd), os.environ["FORM"])
+    # else:
+    #     #form_data = os.environ["FORM_DYG"]
+    #     result = fillForm(buaaLogin(your_name, your_pwd), os.environ["FORM_DYG"])
+    result = fillForm(buaaLogin(your_name, your_pwd), os.environ["FORM_HOME"])
     print(result.text)
     bot_post(result.text)
     return("DONE")
