@@ -28,4 +28,5 @@ jobs:
         WECHAT_KEY: ${{secrets.WECHAT_KEY}}
         FORM: ${{secrets.FORM}}
         FORM_DYG: ${{secrets.FORM_DYG}}
+        FORM_HOME: ${{secrets.FORM_HOME}}
       run: python checkv2.py
