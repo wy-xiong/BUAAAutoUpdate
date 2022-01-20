@@ -62,6 +62,8 @@ def main():
     # print(result.text)
     # bot_post(result.text)
     # return("DONE")
+    print(os.environ["FORM"])
+    print(os.environ["FORM_DYG"])
     print(os.environ["FORM_HOME"])
     
 main()
