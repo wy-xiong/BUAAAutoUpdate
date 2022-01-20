@@ -58,12 +58,9 @@ def main():
     #     #form_data = os.environ["FORM_DYG"]
     #     result = fillForm(buaaLogin(your_name, your_pwd), os.environ["FORM_DYG"])
     
-    # result = fillForm(buaaLogin(your_name, your_pwd), os.environ["FORM_HOME"])
-    # print(result.text)
-    # bot_post(result.text)
-    # return("DONE")
-    print(os.environ["FORM"])
-    print(os.environ["FORM_DYG"])
-    print(os.environ["FORM_HOME"])
+    result = fillForm(buaaLogin(your_name, your_pwd), os.environ["FORM_HOME"])
+    print(result.text)
+    bot_post(result.text)
+    return("DONE")
     
 main()
