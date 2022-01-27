@@ -13,7 +13,8 @@ chat_id = os.environ["CHAT_ID"]
 
 def bot_post(text):
     if wechat_key != "":
-        url1 = 'https://sctapi.ftqq.com/' + wechat_key + '.send?title=check_ok' + '&desp='+text+time.strftime("%m-%d", time.localtime())
+        message = text.split("\"")[5]
+        url1 = 'https://sctapi.ftqq.com/' + wechat_key + '.send?title=' + message + '&desp='+text+time.strftime("%m-%d", time.localtime())
         re_result = requests.get(url1)
         print(re_result.text)
     if token != "":
