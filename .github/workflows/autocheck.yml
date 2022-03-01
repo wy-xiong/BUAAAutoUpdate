@@ -3,7 +3,7 @@ name: autocheck
 on:
   workflow_dispatch: # 手动触发
   schedule: 
-    - cron: '0 9 * * *' # 北京时间17点05分
+    - cron: '23 10 * * *' # 北京时间17点05分对应0 9，已改为23 10
 
 jobs: 
   check: 
