@@ -29,4 +29,5 @@ jobs:
         FORM: ${{secrets.FORM}}
         FORM_DYG: ${{secrets.FORM_DYG}}
         FORM_HOME: ${{secrets.FORM_HOME}}
+        FORM_YXL: ${{secrets.FORM_YXL}}
       run: python checkv2.py
