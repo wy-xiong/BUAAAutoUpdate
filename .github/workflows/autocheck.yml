@@ -3,7 +3,7 @@ name: autocheck
 on:
   workflow_dispatch: # 手动触发
   schedule: 
-    - cron: '23 10 * * *' # 北京时间17点05分对应0 9，已改为23 10
+    - cron: '0 9 * * *' # 北京时间17点05分对应0 9，已改为23 10
 
 jobs: 
   check: 
@@ -26,8 +26,9 @@ jobs:
         YOUR_NAME: ${{secrets.YOUR_NAME}}
         CHAT_ID: ${{secrets.CHAT_ID}}
         WECHAT_KEY: ${{secrets.WECHAT_KEY}}
-        FORM: ${{secrets.FORM}}
-        FORM_DYG: ${{secrets.FORM_DYG}}
-        FORM_HOME: ${{secrets.FORM_HOME}}
-        FORM_YXL: ${{secrets.FORM_YXL}}
+        # FORM: ${{secrets.FORM}}
+        # FORM_DYG: ${{secrets.FORM_DYG}}
+        # FORM_HOME: ${{secrets.FORM_HOME}}
+        # FORM_YXL: ${{secrets.FORM_YXL}}
+        FORM_LSH: ${{secrets.FORM_LSH}}
       run: python checkv2.py
