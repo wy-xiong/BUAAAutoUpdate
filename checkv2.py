@@ -60,7 +60,8 @@ def main():
         result = fillForm(buaaLogin(your_name, your_pwd), os.environ["FORM_DYG"])'''
     
     # result = fillForm(buaaLogin(your_name, your_pwd), os.environ["FORM_HOME"])
-    result = fillForm(buaaLogin(your_name, your_pwd), os.environ["FORM_YXL"])
+    # result = fillForm(buaaLogin(your_name, your_pwd), os.environ["FORM_YXL"])
+    result = fillForm(buaaLogin(your_name, your_pwd), os.environ["FORM_LSH"])
     # print(result.text)
     bot_post(result.text)
     return("DONE")
