@@ -26,9 +26,9 @@ jobs:
         YOUR_NAME: ${{secrets.YOUR_NAME}}
         CHAT_ID: ${{secrets.CHAT_ID}}
         WECHAT_KEY: ${{secrets.WECHAT_KEY}}
-        # FORM: ${{secrets.FORM}}
-        # FORM_DYG: ${{secrets.FORM_DYG}}
+        FORM: ${{secrets.FORM}}
+        FORM_DYG: ${{secrets.FORM_DYG}}
         # FORM_HOME: ${{secrets.FORM_HOME}}
         # FORM_YXL: ${{secrets.FORM_YXL}}
-        FORM_LSH: ${{secrets.FORM_LSH}}
+        # FORM_LSH: ${{secrets.FORM_LSH}}
       run: python checkv2.py
